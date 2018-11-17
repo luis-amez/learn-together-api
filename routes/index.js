@@ -5,10 +5,14 @@ const Questions = require('../models/questions');
 
 /* GET default resource */
 router.get('/question', (req, res, next) => {
-  const index = Math.floor(Math.random() * Questions.length);
-  const question = Questions[index];
+  let questions = [];
+  // TO-DO: improve questions selection and move it to the model
+  while (questions.length < 2) {
+    let index = Math.floor(Math.random() * Questions.length);
+    questions.push(Questions[index]);
+  }
 
-  res.status(200).json(question);
+  res.status(200).json(questions);
 });
 
 module.exports = router;
