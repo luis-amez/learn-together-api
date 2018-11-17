@@ -3,6 +3,7 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const cors = require('cors');
+const mongoose = require('mongoose');
 
 const indexRouter = require('./routes/index');
 
@@ -12,6 +13,12 @@ app.use(cors({
   credentials: true,
   origin: ['http://localhost:4200']
 }));
+
+mongoose.Promise = Promise;
+mongoose.connect('mongodb://localhost/learn-together', {
+  keepAlive: true,
+  reconnectTries: Number.MAX_VALUE
+});
 
 app.use(logger('dev'));
 app.use(express.json());
