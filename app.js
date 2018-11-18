@@ -50,7 +50,7 @@ app.use(cookieParser());
 
 app.use('/', indexRouter);
 app.use('/auth', authRouter);
-app.use('/chirp', chirpRouter);
+app.use('/chirps', chirpRouter);
 
 module.exports = app;
 
