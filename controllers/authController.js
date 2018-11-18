@@ -12,6 +12,14 @@ exports.me = (req, res, next) => {
   }
 };
 
+exports.isLoggedIn = (req, res, next) => {
+  if (req.session.currentUser) {
+    return next();
+  } else {
+    return res.status(401).json({code: 'unauthorized'});
+  }
+};
+
 exports.login = (req, res, next) => {
   if (req.session.currentUser) {
     return res.status(401).json({code: 'unauthorized'});
