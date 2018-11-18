@@ -9,7 +9,7 @@ const chirpSchema = new Schema({
     type: String,
     required: true
   },
-  owner: {
+  author: {
     type: ObjectId,
     ref: 'User',
     required: true
