@@ -4,7 +4,7 @@ const router = express.Router();
 const Questions = require('../models/questions');
 
 /* GET default resource */
-router.get('/question', (req, res, next) => {
+router.get('/questions', (req, res, next) => {
   let questions = [];
   // TO-DO: improve questions selection and move it to the model
   while (questions.length < 2) {
