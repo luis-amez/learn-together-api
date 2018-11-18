@@ -11,4 +11,9 @@ router.post('/',
   chirpController.newChirp
 );
 
+router.get('/',
+  authController.isLoggedIn,
+  chirpController.getAllChirps
+);
+
 module.exports = router;
