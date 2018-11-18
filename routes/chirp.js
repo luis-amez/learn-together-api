@@ -16,4 +16,9 @@ router.get('/',
   chirpController.getAllChirps
 );
 
+router.get('/author',
+  authController.isLoggedIn,
+  chirpController.getChirpsFromAuthor
+);
+
 module.exports = router;
