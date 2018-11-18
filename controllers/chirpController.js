@@ -20,6 +20,7 @@ exports.newChirp = (req, res, next) => {
 exports.getAllChirps = (req, res, next) => {
   Chirp
     .find()
+    .populate('author', 'username')
     .sort({ createdAt: 'desc' })
     .then((chirps) => {
       return res.status(200).json(chirps);
