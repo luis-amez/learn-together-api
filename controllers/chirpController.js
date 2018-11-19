@@ -43,3 +43,23 @@ exports.getChirpsFromAuthor = (req, res, next) => {
       return next(error);
     });
 };
+
+exports.shareChirp = (req, res, next) => {
+  const user = req.session.currentUser._id;
+  const chirpId = req.body.chirpId;
+
+  console.log({chirpId});
+
+  Chirp
+    .findByIdAndUpdate(
+      chirpId,
+      {$addToSet: {shares: user}},
+      {safe: true, upsert: false}
+    )
+    .then((chirp) => {
+      return res.status(200).json(chirp);
+    })
+    .catch((error) => {
+      return next(error);
+    });
+};

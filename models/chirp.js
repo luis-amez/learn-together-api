@@ -13,6 +13,10 @@ const chirpSchema = new Schema({
     type: ObjectId,
     ref: 'User',
     required: true
+  },
+  shares: {
+    type: [{ type: Schema.ObjectId, ref: 'User' }],
+    default: []
   }
 }, {
   timestamps: true

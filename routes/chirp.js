@@ -21,4 +21,9 @@ router.get('/author',
   chirpController.getChirpsFromAuthor
 );
 
+router.put('/share',
+  authController.isLoggedIn,
+  chirpController.shareChirp
+);
+
 module.exports = router;
