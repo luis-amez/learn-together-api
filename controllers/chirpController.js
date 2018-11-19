@@ -54,7 +54,7 @@ exports.shareChirp = (req, res, next) => {
     .findByIdAndUpdate(
       chirpId,
       {$addToSet: {shares: user}},
-      {safe: true, upsert: false}
+      {safe: true, upsert: true, new: true}
     )
     .then((chirp) => {
       return res.status(200).json(chirp);
