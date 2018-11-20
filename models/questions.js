@@ -26,7 +26,7 @@ const Questions = [
     correctAnswer: 'drank',
     explonation:'big string 4',
     gifImage:'https://media.giphy.com/media/hllwtNe9cnAeA/giphy.gif'
-  }
+  },
   {
     question: 'What is the past tense of die?',
     options: ['dye', 'dyed', 'died', 'deathed'],
