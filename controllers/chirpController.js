@@ -48,8 +48,6 @@ exports.shareChirp = (req, res, next) => {
   const user = req.session.currentUser._id;
   const chirpId = req.body.chirpId;
 
-  console.log({chirpId});
-
   Chirp
     .findByIdAndUpdate(
       chirpId,
@@ -57,6 +55,29 @@ exports.shareChirp = (req, res, next) => {
       {safe: true, upsert: true, new: true}
     )
     .then((chirp) => {
+      return res.status(200).json(chirp);
+    })
+    .catch((error) => {
+      return next(error);
+    });
+};
+
+exports.deleteChirp = (req, res, next) => {
+  const currentUser = req.session.currentUser._id;
+  const chirpId = req.body.chirpId;
+  const dateInOneWeek = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
+
+  console.log('delete');
+  console.log(currentUser);
+
+  Chirp
+    .findOneAndUpdate(
+      {_id: chirpId, author: currentUser},
+      {$set: {deleteDate: dateInOneWeek}},
+      {safe: true, upsert: true, new: true}
+    )
+    .then((chirp) => {
+      console.log(chirp);
       return res.status(200).json(chirp);
     })
     .catch((error) => {

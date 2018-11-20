@@ -26,4 +26,9 @@ router.put('/share',
   chirpController.shareChirp
 );
 
+router.put('/delete',
+  authController.isLoggedIn,
+  chirpController.deleteChirp
+);
+
 module.exports = router;

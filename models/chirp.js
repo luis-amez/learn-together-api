@@ -17,6 +17,10 @@ const chirpSchema = new Schema({
   shares: {
     type: [{ type: Schema.ObjectId, ref: 'User' }],
     default: []
+  },
+  deleteDate: {
+    type: Date,
+    default: undefined
   }
 }, {
   timestamps: true
