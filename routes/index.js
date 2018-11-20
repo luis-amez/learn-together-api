@@ -8,7 +8,7 @@ router.get('/question', (req, res, next) => {
   let questions = [];
   let previouslySelectedIndexes = [];
   // TO-DO: improve questions selection and move it to the model
-  while (questions.length < 2) {
+  while (questions.length < 4) {
     let index = Math.floor(Math.random() * Questions.length);
 
     if(!checkForRepeats(previouslySelectedIndexes, index)) {
