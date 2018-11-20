@@ -64,7 +64,7 @@ const Questions = [
     options: ['On', 'Bye', 'Over', 'During'],
     correctAnswer: 'During',
     explonation:'Here, we want a preposition in relation to time, therefore ‘during’ is the appropriate word. The other words are not appropriate with reference to the context of this sentence.',
-    gifImage:'https://media.giphy.com/media/yuI7fL5cR1YeA/giphy.gif'
+    gifImage:'https://media.giphy.com/media/IPbS5R4fSUl5S/giphy.gif'
   },
   {
     question: `Fill the gap with the appropriate word from the following options.
