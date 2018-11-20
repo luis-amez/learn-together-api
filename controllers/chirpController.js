@@ -84,3 +84,69 @@ exports.deleteChirp = (req, res, next) => {
       return next(error);
     });
 };
+
+exports.getStats = (req, res, next) => {
+  console.log('getStats');
+  const chirpId = req.params.chirpId;
+
+  Chirp
+    .findById(chirpId)
+    .then((chirp) => {
+      const stats = calculateStats(chirp);
+      return res.status(200).json(stats);
+    });
+};
+
+function calculateStats (chirp) {
+  let stats = {};
+
+  stats.popularity = calculatePopularity(chirp.createdAt, chirp.shares.length);
+  stats.danger = calculateDanger(chirp.content);
+  stats.offense = calculateOffense(chirp.content);
+
+  return stats;
+}
+
+function calculatePopularity (dateOfCreation, numberOfShares) {
+  let timeFromPostedInMinutes = Math.floor((Date.now() - dateOfCreation.getTime()) / (1000 * 60));
+  console.log({timeFromPostedInMinutes});
+  let reach = Math.floor(Math.random() * 9) + 11 * (timeFromPostedInMinutes + 1) + 1100 * numberOfShares;
+  return reach;
+}
+
+function calculateDanger (message) {
+  const dangerousExpressions = ['i live in', 'i live at', 'today i will be in', 'today i will be at', 'my card number', 'i\'m alone'];
+  const lowerCaseMessage = message.toLowerCase();
+
+  let danger = dangerousExpressions.reduce((score, expression) => {
+    if (lowerCaseMessage.includes(expression)) {
+      score += 10;
+    }
+    return score;
+  }, 0);
+  danger = danger > 100 ? 100 : danger;
+
+  return danger;
+}
+
+function calculateOffense (message) {
+  const listBadWords = require('badwords-list');
+  const arrayBadWords = listBadWords.array;
+  const ofensiveExpressions = ['i hate', 'die in fire'];
+  const lowerCaseMessage = message.toLowerCase();
+
+  let ofense = ofensiveExpressions.reduce((score, expression) => {
+    if (lowerCaseMessage.includes(expression)) {
+      score += 25;
+    }
+    return score;
+  }, 0);
+  message.split(' ').forEach((word) => {
+    if (arrayBadWords.includes(word)) {
+      ofense += 10;
+    }
+  });
+  ofense = ofense > 100 ? 100 : ofense;
+
+  return ofense;
+}

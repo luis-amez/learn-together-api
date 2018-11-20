@@ -8,6 +8,7 @@
     "test": "mocha"
   },
   "dependencies": {
+    "badwords-list": "^1.0.0",
     "bcrypt": "^3.0.2",
     "body-parser": "^1.18.3",
     "connect-mongo": "^2.0.1",

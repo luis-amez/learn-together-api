@@ -31,4 +31,9 @@ router.put('/delete',
   chirpController.deleteChirp
 );
 
+router.get('/stats/:chirpId',
+  authController.isLoggedIn,
+  chirpController.getStats
+);
+
 module.exports = router;
