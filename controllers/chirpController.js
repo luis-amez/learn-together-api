@@ -115,7 +115,7 @@ function calculatePopularity (dateOfCreation, numberOfShares) {
 }
 
 function calculateDanger (message) {
-  const dangerousExpressions = ['i live in', 'i live at', 'today i will be in', 'today i will be at', 'my card number', 'i\'m alone'];
+  const dangerousExpressions = ['i live in', 'i live at', 'today i will be in', 'today i will be at', 'my credit card number', 'i\'m alone'];
   const lowerCaseMessage = message.toLowerCase();
 
   let danger = dangerousExpressions.reduce((score, expression) => {
