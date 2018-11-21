@@ -4,7 +4,7 @@ const Questions = [
     bigQuestion: "Does our emergency generator ______ any power?",
     options: ['blow up', 'generates', 'goes', 'generate'],
     correctAnswer: 'generate',
-    explonation:'Correct answer is "generates" because... [this is really elaborate and amazing explonation with insight into the meaning of life itself.]',
+    explonation:'Correct answer is "generate" because... Lorem ipsum dolor sit amet, natum virtute disputando cu nam, eos cu novum perpetua. Ut iudico salutandi expetendis nec, sea et aliquando referrentur. Putant labitur duo in. Eam omnes aperiri ex. In assum verterem necessitatibus mea. Ut mollis dissentias sit, an oblique persequeris eam',
     gifImage:'https://media.giphy.com/media/lM86pZcDxfx5e/giphy.gif'
   },
   {
@@ -12,7 +12,7 @@ const Questions = [
     bigQuestion: "I Quit _____ 3 months ago.",
     options: ['smoking', 'smoked fish', 'smoke', 'being chimney'],
     correctAnswer: 'smoking',
-    explonation:'Correct answer is "smoking" because of the grammar. Grammar formalities is not my strong point.',
+    explonation:'Correct answer is "smoking" because of the grammar. Grammar formalities is not my strong point. So...Lorem ipsum dolor sit amet, natum virtute disputando cu nam, eos cu novum perpetua. Ut iudico salutandi expetendis nec, sea et aliquando referrentur. Putant labitur duo in. Eam omnes aperiri ex. In assum verterem necessitatibus mea. Ut mollis dissentias sit, an oblique persequeris eam.',
     gifImage:'https://media.giphy.com/media/CKsIi206Ntz4k/giphy.gif'
   },
   {
@@ -20,7 +20,7 @@ const Questions = [
     bigQuestion: "This is _____ !!! He doesn't even understand what he's talking about!",
     options: ['an elephant', 'a hoax', 'amazing', 'a hero'],
     correctAnswer: 'a hoax',
-    explonation:'The correct answer is "a Hoax" because the seller is trying to trick John into believing that he is buying a real proof.',
+    explonation:'The correct answer is "a Hoax" because the seller is trying to trick John into believing that he is buying a real proof. Also, Lorem ipsum dolor sit amet, natum virtute disputando cu nam, eos cu novum perpetua. Ut iudico salutandi expetendis nec, sea et aliquando referrentur. Putant labitur duo in. Eam omnes aperiri ex. In assum verterem necessitatibus mea. Ut mollis dissentias sit, an oblique persequeris eam.',
     gifImage:'https://media.giphy.com/media/CcmdEYnRGAtNe/giphy.gif'
   },
   {
@@ -28,7 +28,7 @@ const Questions = [
     bigQuestion: "Let's go, go, go! We need to _____ to the bus station now!",
     options: ['milkshake', 'ran', 'walk', 'run'],
     correctAnswer: 'run',
-    explonation:'Correct answer is "run" because walking is too slow, and "ran" is past tense. So you use "run" because it is present tense',
+    explonation:'Correct answer is "run" because walking is too slow, and "ran" is past tense. So you use "run" because it is present tense. And milkshake is a type of drink. Lorem ipsum dolor sit amet, natum virtute disputando cu nam, eos cu novum perpetua. Ut iudico salutandi expetendis nec, sea et aliquando referrentur. Putant labitur duo in. Eam omnes aperiri ex. In assum verterem necessitatibus mea. Ut mollis dissentias sit, an oblique persequeris eam.',
     gifImage:'https://media.giphy.com/media/hllwtNe9cnAeA/giphy.gif'
   },
   {////
