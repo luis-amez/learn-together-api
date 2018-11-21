@@ -17,7 +17,7 @@ const Questions = [
   },
   {
     question: '<br>Someone uneducated in the same room as you, claims to have proven Riemann Hypothesis, and now tries to sell it to John. You interupt it by saying:',
-    bigQuestion: "This is _____ !!! He's lying'!",
+    bigQuestion: "This is _____ !!! He's lying!",
     options: ['an elephant', 'a hoax', 'amazing', 'a hero'],
     correctAnswer: 'a hoax',
     explonation:'The correct answer is "a Hoax" because the seller is trying to trick John into believing that he is buying a real proof. Also, Lorem ipsum dolor sit amet, natum virtute disputando cu nam, eos cu novum perpetua. Ut iudico salutandi expetendis nec, sea et aliquando referrentur. Putant labitur duo in. Eam omnes aperiri ex. In assum verterem necessitatibus mea. Ut mollis dissentias sit, an oblique persequeris eam.',
